@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!-- Font Cairo -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+		<!-- Bootstrap Link Cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
+		<!-- Main Style -->
+    <link rel="stylesheet" href="./dist/css/vendore/all.css"/>
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <title>Al-Andalus website</title>
+  </head>
+  <body>
+
+	<!-- start nav -->
+
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container-fluid">
+			<a class="navbar-brand mr-auto" href="#">
+				<img src="./dist/img/Alandalus-logo.png" class="w-75 brand-logo" alt="brand-logo" />
+			</a>
+			<button
+				class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle active"
+							href="#"
+							id="navbarDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false">
+							about us
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item py-2" href="#">our company</a>
+							<a class="dropdown-item py-2" href="#">partners&accreditation</a>
+							<a class="dropdown-item py-2" href="#">corprate structure</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">business unites</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">project</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">media&event</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">careers</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0 form-position">
+					<button type="button" class="btn icon-search" id="search-show">
+						<i class="fas fa-search icon-search"></i>
+						<input class="input-search rounded" type="search" id="search-text" name="search" placeholder="Search">
+					</button>
+				</form>
+				<div class="row">
+					<div class="col-2">
+						<a class="nav-link icon-lang" href="index-rtl.html">
+							<img src="./dist/img/england.png" alt="lang-icon" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Start  Carousel -->
+
+	<div class="carousel">
+		<div class="carousl-container">
+			<div class="carousel-slides anameted-slide content">
+				<img src="./dist/img/carousel-1.jpg" 
+					class="w-100 img-control-height" alt="slide-image-one"/>
+				<div class="carousel-caption">
+					<h3 class="main-header-title display-4">
+						we are growing fast do you see
+					</h3>
+					<p class="lead main-header-des d-none d-md-block">
+						Preserved defective offending he daughters on or. Rejoiced
+						prospect yet material servants out answered men admitted.
+						Sportsmen certainty prevailed suspected am as. Add stairs admire
+						all answer the nearer yet length.
+					</p>
+					<button class="btn btn-main-header text-white">learn more</button>
+				</div>
+			</div>
+			<div class="carousel-slides anameted-slide">
+				<img src="./dist/img/carousel-2.jpg"
+					class="w-100 img-control-height" alt="slide-image-one"/>
+				<div class="carousel-caption">
+					<h3 class="main-header-title display-4">
+						we are growing fast do you see
+					</h3>
+					<p class="lead main-header-des d-none d-md-block">
+						Preserved defective offending he daughters on or. Rejoiced
+						prospect yet material servants out answered men admitted.
+						Sportsmen certainty prevailed suspected am as. Add stairs admire
+						all answer the nearer yet length.
+					</p>
+					<button class="btn btn-main-header text-white">learn more</button>
+				</div>
+			</div>
+			<div class="carousel-slides anameted-slide">
+				<img src="./dist/img/carousel-3.jpg"
+					class="w-100 img-control-height" alt="slide-image-one"/>
+				<div class="carousel-caption">
+					<h3 class="main-header-title display-4">
+						we are growing fast do you see
+					</h3>
+					<p class="lead main-header-des d-none d-md-block">
+						Preserved defective offending he daughters on or. Rejoiced
+						prospect yet material servants out answered men admitted.
+						Sportsmen certainty prevailed suspected am as. Add stairs admire
+						all answer the nearer yet length.
+					</p>
+					<button class="btn btn-main-header text-white">learn more</button>
+				</div>
+			</div>
+		</div>
+		<!-- Carousl indecator -->
+		<div class="carousel-indec">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+		<!-- Prev and Next -->
+		<div class="prev-next d-none d-md-flex">
+			<a class="prev" onclick="plusSlides(-1)">&#10095;</a>
+			<a class="next" onclick="plusSlides(1)">&#10094;</a>
+		</div>
+
+	</div>
+
+	<!--Start Section Our-Services-->
+
+	<section class="our-services text-center py-5">
+		<div class="container">
+			<h2 class="services-title  text-uppercase">our services</h2>
+			<div id="diamond" class="underline"><span class="shep"></span></div>
+			<div class="row">
+				<div class="col-xs-12 col-md-4">
+					<div class="card-info">
+						<i class="fas fa-tooth fa-3x icon-services-1"></i>
+						<div class="card-body">
+							<h4 class="card-title text-capitalize">services one</h4>
+							<p class="card-text lead">
+								Preserved defective offending he daughters on or. 
+								Rejoiced prospect yet material servants out answered men admitted. 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<div class="card-info">
+						<i class="fas fa-gopuram fa-3x icon-services-2"></i>
+						<div class="card-body">
+							<h4 class="card-title text-capitalize">services tow</h4>
+							<p class="card-text lead">
+								Preserved defective offending he daughters on or. 
+								Rejoiced prospect yet material servants out answered men admitted. 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<div class="card-info">
+						<i class="fas fa-hospital fa-3x icon-services-3"></i>
+						<div class="card-body">
+							<h4 class="card-title text-capitalize">services three</h4>
+							<p class="card-text lead">
+								Preserved defective offending he daughters on or. Rejoiced prospect yet material servants out answered men admitted. 
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" 
+				class="btn btn-more-services border">
+				view all services
+			</button>	
+		</div>
+	</section>
+
+	<!-- Start Section overview -->
+
+	<section class="overview text-center py-5">
+		<div class="overlay">
+			<div class="container">
+				<h2 class="heading-overview text-uppercase">overview</h2>
+				<div id="diamond" class="underline">
+					<span class="shep"></span>
+				</div>
+				<p class="lead overview-desc">
+					ndalusia is one of the leading regional players in the healthcare provision space in the Middle East. With a network of general hospitals, specialized medical centers, and polyclinics across Egypt and Saudi Arabia, Andalusia has built a unique footprint both in service spectrum and geographically. Andalusia Group for Medical Services was founded in 1984 by the entrepreneur Dr. Darweesh Zagzoug as a single hospital in Jeddah, Saudi Arabia; and grown over 30 years to own and manage several healthcare facilities in both Saudi and Egypt. The second generation family owner Dr. Hazem Zagzoug, the current CEO has made it possible for a renowned financial institution like the IFC to join forces to serve more than 7 million patients in the last 10 years with amicable quality, and creating 2000 new jobs. We are proud of our origin, our progress, as well as 
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Start Section Executives-Officers -->
+	
+	<section class="executives-officers py-5">
+		<div class="container">
+			<h2 class="heading-executives text-center text-capitalize">executives officers</h2>
+			<div id="diamond" class="underline"><span class="shep"></span></div>
+			<div class="row executives-officers-content justify-content-between">
+				<div class="col-md-12 col-lg-6 executives-info">
+					<div class="card shadow">
+						<img src="./dist/img/manager1.jpg" 
+							class="card-img-top w-100" alt="officer-image">
+						<div class="card-body">
+							<h3 class="executives-name text-capitalize mb-0">hazem darwiesh</h5>
+							<strong class='executives-title-desc'>Chief Executive Officer</strong>
+							<p class="card-text lead pt-3">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+							</p>
+						</div>
+						<hr class="border-line m-auto">
+						<div class="card-body">
+							<a href="#" class="card-link social-icon">
+								<i class="fab fa-facebook fa-2x"></i>
+							</a>
+							<a href="#" class="card-link social-icon">
+								<i class="fab fa-twitter fa-2x"></i>
+							</a>
+							<a href="#" class="card-link social-icon">
+								<i class="fab fa-linkedin-in fa-2x"></i>
+							</a>
+							<a href="#" class="card-link social-icon">
+								<i class="fab fa-pinterest fa-2x"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-6 sub-executives">
+					<div class="col-12 ">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-6 executives-info text-center">
+								<img src="dist/img/manage4.jpg" class="c1-1 card-click card-img-top w-100 " alt="upper-officer-image">
+							
+								<h5 class="executives-name text-capitalize pt-2">mr mohamed abdrasoul</h5>
+								<div class="c-1 card-body-hidden card-show pl-2">
+									<p class="executives-title-desc mb-0">Chief Executive Officer</p>
+									<p class="card-text lead pt-3">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+									</p>
+									<hr class="border-line m-auto py-2">
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-facebook fa-2x"></i>
+									</a>
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-twitter fa-2x"></i>
+									</a>
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-linkedin-in fa-2x"></i>
+									</a>
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-pinterest fa-2x"></i>
+									</a>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-6 executives-info text-center">
+								<img src="dist/img/manage4.jpg" class="c2-2 card-click card-img-top w-100 " alt="upper-officer-image" id="card-image">
+								<h5 class="executives-name text-capitalize pt-2">mr abdelHkim gamalElDin</h5>
+								<div class="c-2 card-body-hidden pl-2 card-show">
+									<p class="executives-title-desc mb-0">
+										Chief Executive Officer
+									</p>
+									<p class="card-text lead pt-3">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+									</p>
+									<hr class="border-line m-auto py-2">
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-facebook fa-2x"></i>
+									</a>
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-twitter fa-2x"></i>
+									</a>
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-linkedin-in fa-2x"></i>
+									</a>
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-pinterest fa-2x"></i>
+									</a>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 executives-info text-center">
+								<img src="dist/img/manage4.jpg" class="c3-3 card-click card-img-top w-100 " alt="upper-officer-image" id="card-image">
+								<h5 class="executives-name text-capitalize pt-2">dr walaa kadry</h5>
+								<div class="c-3 card-body-hidden pl-2 card-show">
+									<p class="executives-title-desc mb-0">Chief Executive Officer</p>
+									<p class="card-text lead pt-3">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+									</p>
+									<hr class="border-line m-auto py-2">
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-facebook fa-2x"></i>
+									</a>
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-twitter fa-2x"></i>
+									</a>
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-linkedin-in fa-2x"></i>
+									</a>
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-pinterest fa-2x"></i>
+									</a>
+							</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 executives-info">
+								<img src="dist/img/manage4.jpg" class="c4-4 card-img-top w-100 card-click" alt="upper-officer-image" id="card-image">
+								<h5 class="executives-name text-capitalize pt-2">dr. alaa al goweini</h5>
+								<div class="c-4 card-body-hidden pl-2 card-show">
+									<p class="executives-title-desc mb-0">
+										Chief Executive Officer
+									</p>
+									<p class="card-text lead pt-3">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
+									</p>
+									<hr class="border-line m-auto py-2">
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-facebook fa-2x"></i>
+									</a>
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-twitter fa-2x"></i>
+									</a>
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-linkedin-in fa-2x"></i>
+									</a>
+									<a href="#" class="card-link social-icon">
+										<i class="fab fa-pinterest fa-2x"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Start Section statistics -->
+
+	<section class="statistics text-center">
+		<div class="overlay">
+			<div class="container">
+				<h2 class="statistics-heading text-capitalize">statistics</h2>
+				<div id="diamond" class="underline">
+					<span class="shep"></span>
+				</div>
+				<div class="row py-5">
+					<div class="col-xs-12 col-sm-6 col-md-3 d-flex justify-content-center">
+						<div class="statistic-info py-3">
+							<i class="fas fa-walking fa-3x rounded fa-1"></i>
+							<span class="statistic-num pt-2" id="timer1">1</span>
+							<span class="client-title text-capitalize">client serviced</span>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 d-flex justify-content-center">
+						<div class="statistic-info py-3">
+							<i class="fas fa-cog fa-3x rounded fa-2"></i>		
+							<span class="statistic-num pt-2" id="timer2">1</span>
+							<span class="client-title text-capitalize">machienes</span>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 d-flex justify-content-center">
+						<div class="statistic-info py-3">
+							<i class="fas fa-user-friends fa-3x rounded fa-3"></i>
+							<span class="statistic-num pt-2" id="timer3">1</span>
+							<span class="client-title text-capitalize">qulified staff</span>
+						</div>
+					</div>	
+					<div class="col-xs-12 col-sm-6 col-md-3 d-flex justify-content-center">
+						<div class="statistic-info py-3">
+							<i class="fas fa-map-marker-alt fa-3x rounded fa-4"></i>
+							<span class="statistic-num pt-2" id="timer4">1</span>
+							<span class="client-title text-capitalize">sites</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section Recent-News -->
+	
+	<section class="recent-news">
+		<div class="container">
+			<h2 class="recent-heading text-center text-capitalize">recent news</h2>
+			<div id="diamond" class="underline">
+				<span class="shep"></span>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 col-md-4">
+					<div class="card shadow">
+						<img src="./dist/img/services-2.jpg" 
+							class="card-img-top w-100" alt="service-first">
+						<div class="card-body recent-content">
+							<h5 class="card-title recent-content-title h3">
+								How to Improve Your Sales Volume
+							</h5>
+							<p class="card-text recent-content-desc lead">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</p>
+							<a href="#" class="btn btn-recent-news rounded-0 text-capitalize">
+								read more
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-4">
+					<div class="card shadow">
+						<img src="./dist/img/services-3.jpg" 
+							class="card-img-top w-100 service-secound">
+						<div class="card-body recent-content">
+							<h5 class="card-title recent-content-title h3">
+								How to Improve Your Sales Volume
+							</h5>
+							<p class="card-text recent-content-desc lead">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</p>
+							<a href="#" class="btn btn-recent-news rounded-0 text-capitalize">
+								read more
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-4">
+					<div class="card shadow">
+						<img src="./dist/img/services-4.jpg" 
+							class="card-img-top w-100" alt="services-third">
+						<div class="card-body recent-content">
+							<h5 class="card-title recent-content-title h3">
+								How to Improve Your Sales Volume
+							</h5>
+							<p class="card-text recent-content-desc lead">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</p>
+							<a href="#" class="btn btn-recent-news rounded-0 text-capitalize">
+								read more
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</section>
+
+	<!-- Start Section Our-Partners-->
+
+	<section class="our-partners d-flex align-items-center">
+		<div class="container">
+			<h2 class="partners-title text-center text-uppercase py-4">great partners</h2>
+			<div id="diamond" class="underline">
+				<span class="shep"></span>
+			</div>
+			<div class="row justify-content-between py-4">
+				<div class="col-8 col-sm-6 col-md-4 col-lg-2 py-3 m-auto">
+					<a href=""><img src="./dist/img/logo1.jpg" 
+						class="w-100 bank-logo" alt="logo-client-first">
+					</a>
+				</div>
+				<div class="col-8 col-sm-6 col-md-4 col-lg-2 py-3 m-auto">
+					<a href=""><img src="./dist/img/logo2.jpg" 
+						class="w-100 bank-logo" alt="logo-client-secound">
+					</a>
+				</div>
+				<div class="col-8 col-sm-6 col-md-4 col-lg-2 py-3 m-auto">
+					<a href=""><img src="./dist/img/logo3.jpg" 
+						class="w-100 bank-logo" alt="logo-client-third">
+					</a>
+				</div>
+				<div class="col-8 col-sm-6 col-md-4 col-lg-2 py-3 m-auto">
+					<a href="#"><img src="./dist/img/logo4.jpg" 
+						class="w-100 bank-logo" alt="logo-client-f">
+					</a>
+				</div>
+				<div class="col-8 col-sm-6 col-md-4 col-lg-2 py-3 m-auto">
+				<a href=""><img src="./dist/img/logo3.jpg" 
+					class="w-100 bank-logo" alt="">
+				</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Start footer -->
+
+	<footer class="py-5 footer-contaier">
+		<div class="container">
+			<h2 class="footer-heading text-capitalize">explore more</h2>
+			<hr class="mb-5 footer-border-line">
+			<div class="row">
+				<div class="col-md-3  footer-linkes pb-4">
+					<h3 class="linkes-heading subtitle text-uppercase">quik linkes</h3>
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link" href="#">home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">about</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">carrers</a>
+						</li>
+							<li class="nav-item">
+							<a class="nav-link" href="#">events</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">news</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">contact</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-md-3 footer-linkes pb-4">
+					<h3 class="hospital-heading subtitle text-uppercase">our hospitals</h3>
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link hospital-link" href="#">al shalalt</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">al shalalt</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">semoha</a>
+						</li>
+							<li class="nav-item">
+							<a class="nav-link" href="#">antoniabes</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">maadi</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">hai el jamaa</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-6 d-flex flex-column justify-content-between news-letter pb-4">
+					<h3 class=" news-letter-heading subtitle text-uppercase">news letters</h3>
+					<form class="card form-news-letter border-0 rounded-0">
+						<div class="input-group">
+							<input type="email" name="email" id="email-name" 
+							class="form-control" placeholder="Email Adress">
+							<div class="input-group-append">
+								<button type="submit" class="btn btn-subscripe 
+									rounded-0 text-capitalize">subscribe now
+								</button>
+							</div>
+						</div>
+					</form>
+					<div class="copy-right">
+						<p class="copy-right-desc">
+							copy right 2018 &copy; andalus group
+						</p>
+						<ul class="nav flex-row">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fab fa-facebook-f fa-lg"></i>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fab fa-twitter fa-lg"></i>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fab fa-google-plus-g fa-lg"></i>
+								</a>
+							</li>
+						</ul>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Jqurry -->
+	<script
+		src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<!-- Popper -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<!-- Bootsrtap Js -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+		integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+		crossorigin="anonymous"></script>
+		<!-- Main Js -->
+		<script src="dist/js/main.js"></script>
+  </body>
+</html>

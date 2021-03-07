@@ -1,0 +1,86 @@
+//Screen devices
+
+@mixin Xs {
+  @media (max-width:575px) {
+    @content;
+  }
+}
+@mixin Sm { 
+  @media (min-width:576px) and (max-width:768.98px){
+     @content;
+  }
+}
+
+@mixin Md {
+  @media (min-width:769px) and (max-width:991.98px){
+      @content;
+  }
+}
+
+@mixin Lg {
+  @media (min-width:992px) and (max-width:1199.98px){
+    @content;
+  }
+}
+
+ @mixin Xlg {
+    @media (min-width:1200px){
+      @content;
+  }
+}
+
+// Mixin
+// Transition
+
+@mixin bt-transition($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -ms-transition: $property;
+  -o-transition: $property;
+   transition: $property;
+}
+
+// Transform Rotate
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  -o-transform: $property;
+   transform: $property;
+}
+
+// background
+
+@mixin background($property) {
+  -webkit-background-size: $property;
+  -moz-background-size: $property;
+  -ms-background-size: $property;
+  -o-background-size: $property;
+   background-size: $property;
+}
+
+@mixin mask-image($property) {
+  -webkit-mask-image: $property;
+   mask-image: $property;
+
+}
+
+// change border-color
+
+@mixin bg-color($r) {
+  background-color: $r
+}
+
+@mixin  border-bottom-white($r) {
+  border-bottom-color: $r
+}
+
+@mixin  border-top-white($r) {
+  border-top-color: $r
+}
+
+@mixin  bg-white ($r){
+  background-color: $r;
+}
+

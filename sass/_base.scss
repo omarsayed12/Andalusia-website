@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cairo", sans-serif;
+
+}
+
+.shep {
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  left: 57px;
+  height: 5px;
+  background-color: #f3f3f3;
+  top: 3px;
+}
+
+#diamond {
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: $orange-dark;
+  position: relative;
+  top: -24px;
+  left: -35px;
+  margin: auto;
+}
+
+#diamond:after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: $orange-dark;
+}
+
+.underline::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 60px;
+  height: 5px;
+  top: 3px;
+  left: 14px;
+  background: $orange-dark;
+}
+
+// All Button Not Focuse it
+.btn:focus {
+    @extend .foucus-none;
+  }

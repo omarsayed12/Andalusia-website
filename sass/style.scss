@@ -1,0 +1,470 @@
+@import "varaible";
+
+@import "mixin";
+
+@import "extend";
+
+@import "base";
+
+/*start nav*/
+
+.navbar{
+  .navbar-brand{
+    .brand-logo{
+      object-fit: cover;
+    }
+  }
+  .nav-item{
+    padding: 7px;
+    
+    &:hover {
+      background-color: $gray;
+      font-weight: $font-bold
+    }
+    .nav-link  {
+      @extend %font-shorthand;
+      @include bt-transition(.4s);
+      text-transform: capitalize;
+      
+      &:hover {
+        color:$orange-dark
+      }
+    }
+    .dropdown-menu {    
+      min-width: 16rem;
+      padding-top: 0;
+      border: 0;
+      margin: 0;
+      border-radius: 0;
+      background-color: $gray;
+      
+      .dropdown-item {
+        font-size: $font-main;
+        text-transform: capitalize;
+        @include bt-transition(.4s);
+        
+        &:hover {
+          color:$orange-dark;
+          font-weight: $font-bold
+        }   
+      }
+    }
+    .dropdown-toggle::after {
+      display:none;
+    }
+  }
+  .icon-search {
+    color: $ligthGray;
+    font-size: 18px;
+  }
+  .input-search {
+    position: absolute;
+    width: 70%;
+    padding: 0 15px;
+    top: 70px;
+    height: 50px;
+    right: 63px;
+    border:0;
+    color:$ligthGray;
+    font-size: 18px;
+    z-index: 1;
+    display: none;
+
+    &:focus {
+      @extend .foucus-none;
+    }
+  }
+}
+
+/* Slideshow container */
+
+  .carousl-container{
+    position: relative;
+    margin:0 auto;
+
+    .carousel-slides {
+      display: none;
+
+      .img-control-height {
+          max-height: 90vh;
+      }
+
+      .carousel-caption {
+        position: absolute;
+        width: 45%;
+        text-align: left;
+        top: 50%;
+        left: 50%;
+        transform: translate(-100%, -55%);
+
+        .main-header-title {
+            color:$orange-dark;
+            padding-right: 30px;
+            font-weight: $font-boldS;
+        }
+        .main-header-des {
+          color: $ligthGray;
+          padding: 15px 30px 15px 0;
+          font-weight: $font-boldS;
+        }
+        .btn-main-header {
+          background: $linear-orange;
+          padding: $btn-padding;
+          font-size: $font-main;
+        }
+      }
+    }
+  }
+  .carousl-container::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(196, 196, 196, 0.5);
+    @include mask-image(radial-gradient(54% 115% at right, transparent 55%, #FFE 55%)); 
+  }
+
+  .carousel-indec{
+    position: absolute;
+    top: 32%;
+    right: 47px;
+    display: flex;
+    flex-direction: column;
+
+    .dot {
+      cursor: pointer;
+      height: 8px;
+      width: 8px;
+      margin-bottom: 12px;
+      background-color: #FFF;
+      border-radius: 50%;
+      display: inline-block;
+      @include bt-transition(0.6s);
+    }
+    .actives, .dot:hover {
+      background-color: $orange-dark;
+    }
+  }
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: $font-main;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  @include bt-transition(0.6s);
+  @include transform(rotate(90deg)); 
+
+    &:hover {
+      text-decoration: none;
+      color: $orange-dark;
+    }
+}
+.next {
+  top: 22%;
+  right: 31px;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+  right: 31px;
+  bottom: 51%;
+}
+.anameted-slide{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*Start Our-Services*/
+
+.our-services {
+
+
+  .services-title {
+    font-weight: $font-bold;
+    padding: $main-padding;
+  }
+  .card-info {
+    padding: $main-padding;
+    cursor: pointer;
+
+    .card-title {
+      color:$ligthGray
+    }
+  }
+  .btn-more-services {
+    font-size: $font-main;
+    padding: $btn-padding;
+    @include bt-transition(.6s);
+
+    &:hover {
+      background-color: $orange-dark;
+      color: #FFF
+    }
+  }
+}
+
+/*Start section Overview*/
+
+.overview {
+  position: relative;
+  min-height: 50vh;
+  background: $bg-overview;
+  @include background(cover); 
+
+  .overlay{
+    @extend .overlay;
+  }
+  .heading-overview {
+    font-weight: $font-bold;
+    padding: $main-padding;
+    color:#FFF;
+  }
+  #diamond {
+    .shep {
+      @include bg-white ($rgba-light-orange);
+    }
+  }
+  .overview-desc {
+    color:#FFF
+  }
+}
+
+/*Start Executives-Officers*/
+
+.executives-officers {
+  padding: $main-padding;
+  
+  .heading-executives {
+    font-weight: $font-bold;
+    padding: $main-padding;
+  }
+  .executives-officers-content {
+    padding: 5% 2%;
+    
+    .executives-info {
+      margin-bottom: 20px;
+      cursor: pointer;
+      .card {
+        cursor: pointer;
+      }
+      .executives-name {
+        font-weight: $font-bold;
+      }
+      .card-body-hidden {
+        height: 120px;
+        display: none;
+        overflow: auto;
+        text-align: left;
+      }  
+      .show{
+        display: block;
+      }    
+      .executives-title-desc {
+        color:$orange
+      }
+      .border-line{
+        width: 85%;
+      }
+      .social-icon{
+        color:$black
+      }
+    }  
+  }
+}
+
+/*Start Section Statistics*/
+
+.statistics {
+  position: relative;
+  min-height: 350px;
+  background-image: $bg-statistics;
+  @include background(cover); 
+
+  .overlay {
+    background-color:$rgba-orange;
+    @extend .overlay;
+    
+    .statistics-heading {
+      color:#FFF;
+      font-weight: $font-bold; 
+      padding: $main-padding;
+    }
+    #diamond {
+
+      .shep {
+        @include bg-white ($rgba-light-orange);
+      }
+    }
+  }
+  
+  .statistic-info {
+
+    i, 
+    .statistic-num,
+    .client-title {
+      display: block;
+    }
+    i {
+      &:hover::before {
+        @include bt-transition(.6s);
+        color: $orange-dark;
+      }
+    }
+    .statistic-num {
+      font-size: 23px;
+      font-weight: 700;
+      color: #FFF;
+    }
+    .client-title {
+      font-size: 20px;
+      font-weight: $font-bold;
+      color: #FFF;
+    }
+  }      
+}
+
+/*Start Section Recent-News*/
+
+.recent-news {
+  padding: 2% 5%;
+  
+  .recent-heading {
+    font-weight: $font-boldS;
+    padding: $main-padding;
+  }
+  #diamond {
+    .shep {
+      @include bg-white (#FFF)
+    }
+  }
+}
+
+.card {
+  margin-bottom: 20px;
+  cursor: pointer;
+    
+  .card-body {
+
+    .recent-content {
+      color: $black
+    }
+    .btn-recent-news {
+      background-color: $orange-dark;
+      padding:$btn-padding;
+      font-size: $font-main;
+      color: #fff
+    }
+  }
+}
+
+/*Start Section our-partners*/
+
+.our-partners {
+  min-height: 200px;
+  background-color: $orange-dark;
+
+  .partners-title {
+    font-weight: $font-bold;
+    color:#FFF
+  } 
+  .underline::before{
+    @include bg-color(#FFF)
+  }
+  #diamond {
+    @include border-bottom-white (#FFF);
+
+    .shep {
+      @include bg-white ($orange-dark)
+    }
+  }
+  
+  #diamond::after {
+    @include border-top-white (#FFF);
+  }
+}
+
+/*Start footer*/
+
+.footer-contaier {
+  background-color: $gray-dark;
+  
+  .footer-heading {
+    font-weight: $font-bold;
+    font-family: $font-emoji;
+    color:#fff
+  }
+  .footer-border-line {
+    background-color: $ligthGray
+  }
+  .footer-linkes {
+    
+    .subtitle {
+      color:#FFf;
+      padding-bottom: 5px;
+    }
+    .nav-item {
+      
+      .nav-link {
+        @extend %capitalze-color;
+
+        &:hover {
+          color: $orange-dark;
+        }
+        }
+      }
+  }
+
+  .subtitle {
+    color:#FFf;
+    padding-bottom: 5px;
+  }
+  
+  .news-letter {
+    
+    .form-news-letter {
+      .form-control {
+        border: 0;
+        height: 42px;
+      }
+      .btn-subscripe {
+        background-color: $orange-dark;
+        padding: $btn-padding;
+        color:#FFF;
+        @extend %font-shorthand;
+      }
+    }
+    .copy-right {
+      
+      .copy-right-desc {
+        text-transform: uppercase;
+        color: $gray-x;
+      }
+      .nav-item {
+
+        .nav-link {
+          color: $gray-x;
+
+          &:hover {
+            color: $orange-dark;
+         }
+        }
+      }
+    } 
+  } 
+}
+@import "media";

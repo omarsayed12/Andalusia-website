@@ -1,0 +1,48 @@
+.foucus-none {
+  outline: 0;
+  box-shadow:none
+} 
+
+%font-shorthand {
+  font-size: $font-main;
+  color: $ligthGray;
+}
+
+%icon-attr {
+  height: 85px;
+  width: 85px;
+  line-height: 85px;
+  color: #FFF;
+}
+
+%capitalze-color {
+  text-transform: capitalize;
+  color: $gray-x;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(33 19 8 / 87%);
+  display: flex;
+  align-items: center;
+}
+
+@for $i from 1 through 3 {
+  .our-services .icon-services-#{$i} {
+    background: $linear-orange;
+    border-radius: 50%;
+    @extend %icon-attr;
+  }
+}
+
+@for $i from 1 through 4 {
+  .statistic-info .fa-#{$i} {
+    margin: auto;
+    border: 3px solid #FFF;
+    @extend %icon-attr
+  }
+}

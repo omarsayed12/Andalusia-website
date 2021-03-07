@@ -1,0 +1,181 @@
+@include Xs {
+
+  //navbar
+  .navbar{
+
+    .nav-item{
+      padding: 2px;
+      border-bottom: 1px solid $gray;
+    }
+    .form-position {
+       position: relative;
+      .input-search {
+        width: 90%;
+        top: -4px;
+        right: 0;
+        border: 1px solid $gray-x;
+      }
+    }
+  }
+
+//Carousel
+
+  .carousl-container {
+
+    .carousel-slides{
+
+      .carousel-caption{
+        top: 45%;
+    
+        .main-header-title {
+          font-size: 22px;
+        }
+        }
+      }
+    }
+    .carousel-indec {
+      display: none;
+  }  
+  
+//section Our-Services
+  .our-services {
+
+    .card-info {
+      padding: 10px 0;
+    }
+  }
+
+//Section Overview
+  .overview {
+      min-height: 100vh;
+
+    .heading-overview {
+      padding: $main-padding;
+    }
+  }
+
+//Executives-Officers
+  .executives-officers {
+
+    .executives-officers-content {
+
+      .sub-executives {
+        padding: $elem-padding 0;
+      }
+    }
+  }
+
+//Section Statistics
+  .statistics {
+    min-height: 150vh;
+  }
+
+ //Footer-Contaier
+  .footer-contaier {
+
+    .news-letter {
+
+      .form-news-letter {
+        margin: 10px 0 ;
+
+        .btn-subscripe {
+          padding: 5px 3px;
+        }
+      }
+    }
+    .copy-right {
+
+      .copy-right-desc {
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+@include Sm {
+
+//navbar
+  .navbar{
+
+    .nav-item{
+      padding: 2px;
+      border-bottom: 1px solid $gray;
+    }
+    .form-position {
+       position: relative;
+
+      .input-search {
+        width: 90%;
+        right: 0;
+        top: -4px;
+        border: 1px solid $gray-x;
+      }
+    }
+  }
+
+  .overview {
+    min-height: 70vh;
+    }
+
+   // Section Statistics
+  .statistics {
+    min-height: 100vh;
+  }
+
+  //footer
+  .footer-contaier {
+
+    .news-letter {
+
+      .form-news-letter{
+        margin: 10px 0 ;
+
+        .btn-subscripe {
+          padding: 5px 3px;
+        }
+      }
+    }
+    .copy-right {
+
+      .copy-right-desc{
+        padding: 10px 0;
+        }
+      }
+    } 
+  }
+
+@include Md {
+
+//navbar
+  .navbar {
+
+    .nav-item {
+      padding: 2px;
+      border-bottom: 1px solid $gray;
+    }
+    .form-position {
+      position: relative;
+
+      .input-search {
+        width: 90%;
+        right: 0;
+        top: -4px;
+        border: 1px solid $gray-x;
+      }
+    }
+  }
+}
+
+@include Lg {
+  .navbar{
+
+    .nav-item {
+
+      .nav-link {
+        font-size: 15px;
+        padding: 7px 0px;
+      }
+    }
+  }
+}
+
